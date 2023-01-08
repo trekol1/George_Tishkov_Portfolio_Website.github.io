@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Technical product management</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Back to projects</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Projects</a></li>
+							<li class="active"><a href="financial modeling in excel.html">Tecnical product management and Data Analysis</a></li>
+							<!-- <li><a href="elements.html">Elements Reference</a></li> -->
+						</ul>
+						<ul class="icons">
+							<!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li> -->
+							<li><a href="https://www.linkedin.com/in/george-tishkov/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/trekol1" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://t.me/georgy_mamukovich" class="icon brands fa-telegram"><span class="label">Telegram</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<!-- <span class="date">April 25, 2017</span> -->
+									<h1>Technical <br />product management <br />and data analysis</h1>
+									<p>Analyzing large sets of temperature data <br />and implementing a complex multi-component geothermal monitoring system from scratch</p>
+								</header>
+								<!-- <div class="image main"><img src="images/pic01.jpg" alt="" /></div> -->
+									<h3>Introduction</h3>
+								<p><span class="image right"><img src="img/tech prod/yamal_peninsula.jpg" alt="" /></span>I was working on the polar edge of Russia, on the peninsula Yamal.<br />
+									The soil there is mostly frozen and never defrosts, which adds complexity to any construction work in this area and requires permanent monitoring of soil temperature beneath any construction, in order to avoid sliding.<br />
+									The company TaisS which I was working for was doing geological surveys of permafrost soils and geothermal monitoring. 
+								</p>
+								<h3>Initial challange</h3>
+								<p>At the starting point, I was <b><i>analyzing large datasets</i></b> of soil temperature data and <b><i>bulding visualizations in Excel.</i></b><br />
+									The data was represented by periodical measurements of soil temperature inside a particular borehole recorded at a specific depth. Over 7000 sensors were processed simultaneously.</p>
+								<b>First visualizations and charts</b><br />
+								<p>Below you can see a table (built using <b><i>conditional formatting</i></b>) with data for one particular borehole, which shows at what depth frozen soil is thawing (temperature goes above 0) in 3 years timeframe.<br />Columns are divided by date, and rows are divided by the depth and grouped by a borehole.</p>
+								<p>Keep in mind this was just a starting point, things get better by the end of the story.</p>
+								<a href="https://docs.google.com/spreadsheets/d/1J7LQsiXjunh0XoqYgJJhsURuY0W1IL92Qgb_fdOU2qw/edit?usp=sharing" target="_blank" rel="noopener noreferrer">View in Google Sheets</a>
+								<iframe width="100%" height="500px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT-QLfnin0Kx37bVPAiiPSvRGKCNDYcbGsiZjlESgjFxSgWpoKODEcif8401LG0z1rymjtd6GCvyvMo/pubhtml?widget=true&amp;headers=false"></iframe><p>The demonstrated data shows that permafrost is expanding in the considered borehole, i.e. frozen soil layer is getting closer to the surface every year. All temperatures above 0 are considered to require attention.</p>
+								<p>The chart below gives perspective on a temperature range throughout a year and clearly shows the depth, below which temperature had never been positive during the survey.</p>
+								<span class="image fit"><img src="img/tech prod/soil_temp_data_demo2.jpg" alt="" /></span>
+								<h2>Main product</h2>
+								<b>Preconditions</b><br />
+								<p>Data collection was done manually by specific employees of the company, which <b><i>required significant human resources</i></b> to be involved and <b><i>resulted in substantial costs.</i></b><br />
+								Moreover, collecting data manually caused a <b><i>delay in response</i></b> (from several hours to several days), which was critical especially during the season change.</p>
+								<b>Product objective</b><br />
+								<ul>
+									<li>Measurements should be done automatically according to schedule.</li>
+									<li>Responsible employees of the company should be able to get the measurement data immediately without the need to leave the office.</li>
+								</ul>
+								<p>So the company needed to implement a hardware system to <b><i>collect the data automatically</i></b> and post it to a remote database, in order to give service engineers <b><i>instant access to the data.</i></b></p>
+								<b>Work process</b><br />
+								<p>I started with <b><i>collecting requirements</i></b> from the CEO and internal engineers and analyzing the specifics of each object that was monitored to determine necessary requirements for the system.<br />
+								After the requirements were formed, I communicated with a hardware manufacturer to get an accurate <b><i>production cost estimate</i></b>.<br />
+								Then I <b><i>collaborated with finance department to estimate costs</i></b> of system installation and commissioning, compare that to current costs of manual data collection and <b><i>estimate product profitability</i></b>. The <b><i>break-even time</i></b> was top estimated at 15 months, and the project was approved.<br />
+								The system got the alias ASGM (automated system for geotechnical monitoring) and after it was manufactured and shiped I <b><i>coordinated the installation and commissioning</i></b> process.</p>
+								<b>Technical details</b><br />
+								<p>The system consists of thermocouples (which are chains of temperature sensors connected by a cable) located in thermometric boreholes, and a controller that combines all sensors and provides registration, accumulation, and loading of data into a remote database.<br />	<br />
+								The controller is equipped with:
+											<ul>
+												<li>GSM modem controller to transfer the data to the remote database</li>
+												<li>a non-volatile memory, to store collected data in case of connection loss</li>
+												<li>a redundant power supply, ensuring system operability in case of an outage</li>
+											</ul>
+											Special software on a remote server processes data received from the controller and, in the event of an emergency violation of the temperature regime or failure of system elements sends an urgent notification.</p>
+
+								<h2>Expanding the product with additional feature</h2>
+								<b>There still was room for improvement</b><br />
+								<p>After the ASGM system was put into operation and the large data collection costs required constantly were reduced, the collected data still required manual processing and visualization.<br />
+									At this point <b><i>I puropsed the idea</i></b> of developing a web-based feature for real-time visualization of the collected data.<br /></p>
+									<b>Work process</b><br />
+									<p><b><i>To estimate the cost</i></b> of development of such a feature I <b><i>sketched a prototype in Balsamiq</i></b>, collaborating with internal employees, who were expected to be the users of the feature.<br /></p>
+										<a href="https://drive.google.com/file/d/1xVE0eSw3jwDkaVR6z0g4FPVGldx3sEnL/view?usp=sharing" target="_blank" rel="noopener noreferrer">View full prototype as PDF</a>
+										<span class="image fit"><img src="img/tech prod/ASGM-web_Prototype.jpg" alt="" /></span>
+										<p>I then <b><i>contacted freelance contractors</i></b> from among my old colleagues, who I believed were capable of developing such a feature, and after presenting the prototype to them and <b><i>negotiating</i></b> terms of a possible contract <b><i>estimated the cost</i></b> of developing the feature.<br />
+										After that, I <b><i>collaborated with the finance department</i></b> to compare the new feature costs to current costs and <b><i>estimate the break-even time</i></b>. The break-even point was expected to come after a maximum of 6 months, the project was approved, and I <b><i>coordinated feature development and integration.</i></b><br />
+									</p>
+									<b>Technical details</b><br />
+									<p>The backend of the feature was implemented on <b><i>PHP</i></b> using <b><i>Laravel framework</i></b>. <b><i>Voyager</i></b> admin panel was used, and has been <b><i>customized</i></b> for project's specific needs.<br />
+									Frontend was built using <b><i>HTML, Javascript</i></b> (mainly used <b><i>jQuery</i></b>). Visualizations were built using <b><i>D3.js library</i></b>, which is a pretty low level library. There are higher-level libraries, that solved problems similar to ours, but the project had a lot of specific requirements, and no one of discovered libraries fit them all.<br/>
+									Intuitive and simple user interface is available remotely just like a website, allows to view data and graphs and also to customise visualisations and adapt them for downloading as JPG/PDF and printing.<br /><br />
+									By the end the feature could build new type of visualization which is a slice of soil under the whole object, viewed from above and taken on a specific depth:
+								</p>
+									<span class="image fit"><img src="img/tech prod/soil_temp_data_demo3.jpg" alt="" /></span>
+									<p>And this is how the first visualization from this story looks like built on a new web feature:</p>
+									<span class="image fit"><img src="img/tech prod/soil_temp_data_demo4.jpg" alt="" /></span>
+									<h2>Results</h2>
+									After the project was finished, company had <b><i>3 major outcomes:</i></b><br />
+											<ul>
+												<li><b><i>Company's resourses</i></b> of over ~2100 man-hours/year and ~60000$/year required constantly for manual data collection, and over ~25000$/year for data processing <b><i>were freed and could be directed to other activities.</i></b></li>
+												<li>System development and implementation <b><i>costs were soon broke even</i></b> (13 months for main product and 4 months for additional feature) due to reduced fixed costs.</li>
+												<li>Engineers got <b><i>access to temperature data in real-time mode</i></b>, which allowed them to <b><i>instantly respond</i></b> to any changes or emergencies.</li>
+											</ul>								
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<!-- <section>
+						<form method="post" action="#">
+							<div class="fields">
+								<div class="field">
+									<label for="name">Name</label>
+									<input type="text" name="name" id="name" />
+								</div>
+								<div class="field">
+									<label for="email">Email</label>
+									<input type="text" name="email" id="email" />
+								</div>
+								<div class="field">
+									<label for="message">Message</label>
+									<textarea name="message" id="message" rows="3"></textarea>
+								</div>
+							</div>
+							<ul class="actions">
+								<li><input type="submit" value="Send Message" /></li>
+							</ul>
+						</form>
+					</section> -->
+					<section class="split contact">
+						<section class="alt">
+							<h3>Social</h3>
+							<ul class="icons alt">
+								<li><a href="https://www.linkedin.com/in/george-tishkov/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/trekol1" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="https://t.me/georgy_mamukovich" class="icon brands alt fa-telegram"><span class="label">Telegram</span></a></li>
+							</ul>
+						</section>
+						<section>
+							<h3>Phone</h3>
+							<p><b>+972 586 278698</b></p>
+						</section>
+						<section>
+							<h3>Email</h3>
+							<p><b>tgeorge1993@gmail.com</b></p>
+						</section>
+						<section>
+							<h3>Location</h3>
+							<p><b>Haifa, Israel</b></p>
+						</section>
+					</section>
+				</footer>
+
+				<!-- Copyright -->
+					<!-- <div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div> -->
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
